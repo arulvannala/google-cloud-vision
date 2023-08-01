@@ -33,7 +33,7 @@ public class VisionController {
 
 	@GetMapping("/getLandmarkDetection")
 	public String getLandmarkDetection() {
-		String imageUrl = "https://www.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77888/tour-eiffel-tour-eiffel-illumin%C3%A9e-depuis-champs-de-mars-%C3%A9clairage-dor%C3%A9-%7C-630x405-%7C-%C2%A9-sete-emeric-livinec/21230551-1-fre-FR/Tour-Eiffel-Tour-Eiffel-illumin%C3%A9e-depuis-Champs-de-Mars-%C3%A9clairage-dor%C3%A9-%7C-630x405-%7C-%C2%A9-SETE-Emeric-Livinec.jpg";
+		String imageUrl = "https://upload.wikimedia.org/wikipedia/en/4/41/Paris%2CFrance.jpg";
 		Resource imageResource = this.resourceLoader.getResource(imageUrl);
 		AnnotateImageResponse response = this.cloudVisionTemplate.analyzeImage(imageResource,
 				Feature.Type.LANDMARK_DETECTION);
